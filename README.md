@@ -1,12 +1,9 @@
 # Anouncement Notification System for University Anouncements
 
----
-
-Giray Coskun
-
-[giraycoskun@sabanciuniv.edu](giraycoskun@sabanciuniv)
+A System to track anouncements from a website with Central Authentication System(CAS) such as university acounts
 
 ---
+
 
 ## Classes
 
@@ -38,3 +35,9 @@ Giray Coskun
 * set_login_url(login_url)
 * \__form_data|||(execution)
 * login()
+
+---
+
+Giray Coskun
+
+[giraycoskun@sabanciuniv.edu](giraycoskun@sabanciuniv)
