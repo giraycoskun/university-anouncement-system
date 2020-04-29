@@ -41,4 +41,4 @@ A System to track anouncements from a website with Central Authentication System
 
 Giray Coskun
 
-[giraycoskun@sabanciuniv.edu](<giraycoskun@sabanciuniv>)
+<giraycoskun@sabanciuniv>
