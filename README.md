@@ -1,6 +1,7 @@
-# Anouncement Notification System for University Anouncements
+# Anouncement Notification System for University Anouncements developped for Sabanci University(mySU)
 
 A System to track anouncements from a website with Central Authentication System(CAS) such as university acounts
+[https://mysu.sabanciuniv.edu/](https://mysu.sabanciuniv.edu/)
 
 ---
 
@@ -40,4 +41,4 @@ A System to track anouncements from a website with Central Authentication System
 
 Giray Coskun
 
-[giraycoskun@sabanciuniv.edu](mailto:giraycoskun@sabanciuniv)
+[giraycoskun@sabanciuniv.edu](<giraycoskun@sabanciuniv>)
