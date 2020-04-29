@@ -1,6 +1,9 @@
 """
 @author: Giray Coskun
 @github: https://github.com/giraycoskun
+
+References:
+    https://stackoverflow.com/questions/47869039/python-requests-login-with-website
 """
 import requests
 import bs4
@@ -15,8 +18,8 @@ def display(content):
 
 
 with requests.session() as r:
-    LOGIN = "giraycoskun"
-    PASSWORD = "18GCsabanci"
+    LOGIN = ""
+    PASSWORD = ""
 
     login_url = "https://login.sabanciuniv.edu/cas/login"
     profile_url = "https://mysu.sabanciuniv.edu/announcements/en/all"
