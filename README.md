@@ -25,6 +25,7 @@ A System to track anouncements from a website with Central Authentication System
 * print_content()
 * get_content()
 * write_content(filename)
+---
 
 ### SubClass: Mysu
 
