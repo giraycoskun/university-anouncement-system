@@ -22,7 +22,7 @@ from email.mime.multipart import MIMEMultipart
 from main2 import main
 
 MY_ADDRESS = 'coskun.giray.07@gmail.com'
-PASSWORD = "Gcsuki23Gm"
+PASSWORD = ""
 host = 'localhost'  # 'smtp.gmail.com'
 port = 1025  # 587
 
