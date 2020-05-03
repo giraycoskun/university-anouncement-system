@@ -9,6 +9,7 @@ Reference:
 Docs:
     https://docs.python.org/3/library/smtplib.html
     https://docs.python.org/3/library/email.mime.html
+    https://github.com/Knio/dominate
 
 Notes:
     For Gmail server enable https://myaccount.google.com/lesssecureapps

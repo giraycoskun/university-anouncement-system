@@ -57,13 +57,13 @@ class MySU(WebPage):
             text = announcement.find('a').text
             announcements.append((text, reference))
             #print(text)
-
+        """
         for announcement in old_announcements:
             reference = announcement.find('a', href=True)['href']
             text = announcement.find('a').text
             announcements.append((text, reference))
             #print(text)
-
+        """
         return announcements
 
     def get_announcements(self, announcements):

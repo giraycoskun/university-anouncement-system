@@ -41,7 +41,7 @@ def main():
         soup = bs4.BeautifulSoup(response.text, 'html.parser')
         csrf = soup.find_all('input', {'name': 'execution'})[-1].attrs['value']
 
-        print('csrf:', csrf)
+        #print('csrf:', csrf)
 
         # cookies are not part of form so you don't use in form_data,
         # session will use cookies from previous request so you don't have to copy them
@@ -54,11 +54,11 @@ def main():
         }
 
         # send form data to server
-        response = r.post(login_url, data=form_data)
+        r.post(login_url, data=form_data)
 
-        print('status_code:', response.status_code)
-        print('history:', response.history)
-        print('url:', response.url)
+        # print('status_code:', response.status_code)
+        # print('history:', response.history)
+        # print('url:', response.url)
 
         # display(response.content)
 
@@ -75,7 +75,7 @@ def main():
             reference = announcement.find('a', href=True)['href']
             text = announcement.find('a').text
             announcements.append((text, reference))
-            print(text)
+            # print(text)
 
         announcement_dict = dict()
         for element in announcements:
