@@ -12,6 +12,7 @@ class MySU(WebPage):
         self.username = ""
         self.password = ""
         self.cas_url = "https://login.sabanciuniv.edu/cas/login"
+        self.base_url = "https://mysu.sabanciuniv.edu"
         return
 
     def set_authorization(self, auth):
@@ -20,6 +21,9 @@ class MySU(WebPage):
 
     def set_login_url(self, login_url):
         self.cas_url = login_url
+
+    def set_base_url(self, url):
+        self.base_url = url
 
     def __form_data__(self, execution):
         data = {
@@ -43,3 +47,32 @@ class MySU(WebPage):
         #self.display(response.content)
         #self.set_page(response)
         return self.session
+
+    def get_announcement_list(self):
+        announcements = list()
+        new_announcements = self.soup.find_all('td', class_ = "views-field views-field-title list list-new")
+        old_announcements = self.soup.find_all('td', class_ = "views-field views-field-title list list-old")
+        for announcement in new_announcements:
+            reference = announcement.find('a', href=True)['href']
+            text = announcement.find('a').text
+            announcements.append((text, reference))
+            #print(text)
+
+        for announcement in old_announcements:
+            reference = announcement.find('a', href=True)['href']
+            text = announcement.find('a').text
+            announcements.append((text, reference))
+            #print(text)
+
+        return announcements
+
+    def get_announcements(self, announcements):
+        announcement_dict = dict()
+        for element in announcements:
+            url = self.base_url + element[1]
+            response = self.session.get(url)
+            #self.display(response.content)
+            soup = BeautifulSoup(response.text, 'html.parser')
+            text = soup.find('div', class_="field-item even")
+            announcement_dict[element] = text
+        return announcement_dict
