@@ -71,7 +71,6 @@ message.attach(part1)
 message.attach(part2)
 
 ##################################
-
 context = ssl.create_default_context()
 try:
     server = smtplib.SMTP(host, port)
