@@ -22,25 +22,19 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 
-def mail_server(html):
-    with open('../passwords.txt', 'r') as file:
-        for line in file:
-            if 'mail_address' in line:
-                adress = line.split()[1]
-            if 'mail_password' in line:
-                password = line.split()[1]
-
-    MY_ADDRESS = adress
+def mail_server(html, address, password, sender_email, receiver_emails):
+    sender_email = sender_email
+    receiver_emails = receiver_emails
+    MY_ADDRESS = address
     PASSWORD = password
-    host = 'localhost'  # 'smtp.gmail.com'
-    port = 1025  # 587
+    host = 'smtp.gmail.com'  # 'localhost'
+    port = 587  # 1025
 
     today = date.today()
     today_str = today.strftime('%d/%m/%Y')
 
     # MAIL
-    sender_email = "coskun.giray.07@gmail.com"
-    receiver_email = "coskun.giray.07@gmail.com"
+
     subject = "mySU Announcements " + today_str
 
     # announcements = main()
@@ -49,7 +43,7 @@ def mail_server(html):
     message = MIMEMultipart("alternative")
     message["Subject"] = subject
     message["From"] = sender_email
-    message["To"] = receiver_email
+
 
     # Create the plain-text and HTML version of your message
     text = """\
@@ -72,11 +66,13 @@ def mail_server(html):
     context = ssl.create_default_context()
     try:
         server = smtplib.SMTP(host, port)
-        # server.ehlo()  # Can be omitted
-        # server.starttls(context=context)
-        # server.ehlo()  # Can be omitted
-        # server.login(MY_ADDRESS, PASSWORD)
-        server.sendmail(sender_email, receiver_email, message.as_string())
+        server.ehlo()  # Can be omitted
+        server.starttls(context=context)
+        server.ehlo()  # Can be omitted
+        server.login(MY_ADDRESS, PASSWORD)
+        for mail in receiver_emails:
+            message["To"] = mail
+            server.sendmail(sender_email, mail, message.as_string())
     except Exception as e:
         # Print any error messages to stdout
         print(e)

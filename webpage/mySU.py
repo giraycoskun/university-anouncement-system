@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 
 def clean_announcements():
-    file = open("last_announcements.txt", "r+")
+    file = open("last_announcements.json", "r+")
     file.truncate(0)
     file.close()
 
