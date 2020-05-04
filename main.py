@@ -5,8 +5,10 @@
 References:
     https://stackoverflow.com/questions/47869039/python-requests-login-with-website
 """
+
 import os.path as path
 import json
+from datetime import date
 from webpage.mySU import MySU
 from mail_service.HTML_Template import create_template_html
 from mail_service.Announcement_Mail_Server import mail_server
@@ -62,7 +64,6 @@ with open(filename) as json_file:
     if len(announcements) == 0:
         check = False
 
-
 if check:
     with open(filename) as json_file:
         data = json.load(json_file)
@@ -72,8 +73,8 @@ if check:
         for element in new_data:
             temp.append(element)
 
-        with open(filename, 'w') as f:
-            json.dump(data, f, indent=4)
+    with open(filename, 'w') as json_file:
+        json.dump(data, json_file, indent=4)
 
     ################
 
@@ -90,3 +91,25 @@ if check:
                 password = line.split()[1]
 
     mail_server(html, address, password, sender_email, receiver_emails)
+
+# LOG
+with open('log.json') as json_file:
+    data = json.load(json_file)
+    temp = data['logs']
+    count = len(temp) + 1
+    today = date.today()
+    today_str = today.strftime('%d/%m/%Y')
+
+    new_log = {
+        "date": today_str,
+        "count": str(count),
+        "check": str(check)
+    }
+
+    if check:
+        new_log['html'] = html
+
+    temp.append(new_log)
+
+with open('log.json', 'w') as f:
+    json.dump(data, f, indent=4)
