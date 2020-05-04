@@ -18,8 +18,8 @@ user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 
 user_name = ""
 password = ""
-sender_email = "coskun.giray.07@gmail.com"
-receiver_emails = ["coskun.giray.07@gmail.com"]
+sender_email = ""
+receiver_emails = [""]
 
 with open('passwords.txt', 'r') as file:
     for line in file:
