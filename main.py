@@ -41,7 +41,7 @@ announcements = page.get_announcements(announcements)
 
 # CHECK LAST ANNOUNCEMENTS
 check = True
-filename = path.join('webpage', 'last_announcements.json')
+filename = path.join('mail_service', 'last_announcements.json')
 
 new_data = list()
 for key in announcements:

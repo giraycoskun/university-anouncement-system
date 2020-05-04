@@ -1,6 +1,6 @@
 # Anouncement Notification System for University Anouncements
 
-A System to track anouncements from a website with Central Authentication System(CAS) such as university acounts
+A System to track announcements from a website with Central Authentication System(CAS) such as university acounts
 
 Developed for Sabancı University(mySU)
 [https://mysu.sabanciuniv.edu/](https://mysu.sabanciuniv.edu/)
@@ -10,9 +10,28 @@ Developed for Sabancı University(mySU)
 
 - Change passwords.template to passwords.txt with valid passwords 
 
+- Works with [Task Scheduler](https://martechwithme.com/schedule-python-scripts-windows-mac/)
+
 ---
 
+### Directory Structure:
 
+- [main.py](https://github.com/giraycoskun/University-Anouncement-System/blob/master/main.py)
+
+- [mail_service](https://github.com/giraycoskun/University-Anouncement-System/tree/master/mail_service)
+    - creates template html [HTML_Template.py](https://github.com/giraycoskun/University-Anouncement-System/tree/master/mail_service/HTML_Template.py)
+    - sends email to receiver emails [Announcement_Mail_Server.py](https://github.com/giraycoskun/University-Anouncement-System/tree/master/mail_service/Announcement_Mail_Server.py)
+    - keeps data to already sent announcements [last_announcements.json](https://github.com/giraycoskun/University-Anouncement-System/tree/master/mail_service/last_announcements.template)
+
+- [webpage](https://github.com/giraycoskun/University-Anouncement-System/tree/master/webpage)
+    - [WebPage Class](https://github.com/giraycoskun/University-Anouncement-System/tree/master/webpage/WebPage.py)
+    - [MySU SubClass](https://github.com/giraycoskun/University-Anouncement-System/tree/master/webpage/mySU.py)
+    
+- [main2.py](https://github.com/giraycoskun/University-Anouncement-System/blob/master/main2.py) Keeps a simpler version
+
+- [passwords.txt](https://github.com/giraycoskun/University-Anouncement-System/blob/master/passwords.template) Keeps passwords
+
+---
 ### Class: Website
 #### Properties:
 * user_agent
