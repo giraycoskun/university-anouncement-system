@@ -17,8 +17,11 @@ user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 user_name = ""
 password = ""
 with open('passwords.txt', 'r') as file:
-    user_name = file.readline().strip()
-    password = file.readline().strip()
+    for line in file:
+        if 'mysu_username' in line:
+            user_name = line.split()[1]
+        if 'mysu_password' in line:
+            password = line.split()[1]
 
 auth = (user_name, password)
 

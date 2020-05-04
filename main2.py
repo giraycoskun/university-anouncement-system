@@ -20,8 +20,11 @@ def display(content):
 def main():
     with requests.session() as r:
         with open('passwords.txt', 'r') as file:
-            login = file.readline().strip()
-            password = file.readline().strip()
+            for line in file:
+                if 'mysu_username' in line:
+                    user_name = line.split()[1]
+                if 'mysu_password' in line:
+                    password =line.split()[1]
 
         login_url = "https://login.sabanciuniv.edu/cas/login"
         profile_url = "https://mysu.sabanciuniv.edu/announcements/en/all"
@@ -46,7 +49,7 @@ def main():
         # cookies are not part of form so you don't use in form_data,
         # session will use cookies from previous request so you don't have to copy them
         form_data = {
-            'username': login,
+            'username': user_name,
             'password': password,
             'execution': csrf,
             '_eventId': 'submit',

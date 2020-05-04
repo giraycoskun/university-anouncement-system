@@ -6,6 +6,12 @@ from webpage.WebPage import WebPage
 from bs4 import BeautifulSoup
 
 
+def clean_announcements():
+    file = open("last_announcements.txt", "r+")
+    file.truncate(0)
+    file.close()
+
+
 class MySU(WebPage):
     def __init__(self, url, user_agent):
         WebPage.__init__(self, url, user_agent)

@@ -22,8 +22,15 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from main2 import main
 
-MY_ADDRESS = 'coskun.giray.07@gmail.com'
-PASSWORD = ""
+with open('passwords.txt', 'r') as file:
+    for line in file:
+        if 'mail_address' in line:
+            adress = line.split()[1]
+        if 'mail_password' in line:
+            password = line.split()[1]
+
+MY_ADDRESS = adress
+PASSWORD = password
 host = 'localhost'  # 'smtp.gmail.com'
 port = 1025  # 587
 
