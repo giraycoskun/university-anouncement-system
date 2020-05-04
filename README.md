@@ -10,7 +10,8 @@ Developed for Sabancı University(mySU)
 
 - Change passwords.template to passwords.txt with valid passwords
 - Change mail_service/last_announcements.template to mail_service/last_announcements.json
-- For Gmail server enable [https://myaccount.google.com/lesssecureapps](https://myaccount.google.com/lesssecureapps)
+- Change mail_service/mail_list.template to mail_service/mail_list.txt with valid mail adresses
+- For sender Gmail server enable [https://myaccount.google.com/lesssecureapps](https://myaccount.google.com/lesssecureapps)
 - Works with [Task Scheduler](https://martechwithme.com/schedule-python-scripts-windows-mac/)
 - localhost server command: python -m smtpd -c DebuggingServer -n localhost:1025 (windows: cmd)
 
@@ -24,6 +25,7 @@ Developed for Sabancı University(mySU)
     - creates template html [HTML_Template.py](https://github.com/giraycoskun/University-Anouncement-System/tree/master/mail_service/HTML_Template.py)
     - sends email to receiver emails [Announcement_Mail_Server.py](https://github.com/giraycoskun/University-Anouncement-System/tree/master/mail_service/Announcement_Mail_Server.py)
     - keeps data to already sent announcements [last_announcements.json](https://github.com/giraycoskun/University-Anouncement-System/tree/master/mail_service/last_announcements.template)
+    - keeps mail list both sender and receivers [mail_list.txt](https://github.com/giraycoskun/University-Anouncement-System/tree/master/mail_service/mail_list.templated)
 
 - [webpage](https://github.com/giraycoskun/University-Anouncement-System/tree/master/webpage)
     - [WebPage Class](https://github.com/giraycoskun/University-Anouncement-System/tree/master/webpage/WebPage.py)

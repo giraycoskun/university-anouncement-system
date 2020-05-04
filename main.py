@@ -18,8 +18,10 @@ user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 
 user_name = ""
 password = ""
-sender_email = ""
-receiver_emails = [""]
+filename = path.join('mail_service', 'mail_list.txt')
+with open(filename, 'r') as file:
+    sender_email = file.readline().rstrip()
+    receiver_emails = [line.rstrip() for line in file]
 
 with open('passwords.txt', 'r') as file:
     for line in file:
