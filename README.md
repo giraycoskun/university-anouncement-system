@@ -8,9 +8,11 @@ Developed for Sabancı University(mySU)
 
 #### Notes:
 
-- Change passwords.template to passwords.txt with valid passwords 
-
+- Change passwords.template to passwords.txt with valid passwords
+- Change mail_service/last_announcements.template to mail_service/last_announcements.json
+- For Gmail server enable [https://myaccount.google.com/lesssecureapps](https://myaccount.google.com/lesssecureapps)
 - Works with [Task Scheduler](https://martechwithme.com/schedule-python-scripts-windows-mac/)
+- localhost server command: python -m smtpd -c DebuggingServer -n localhost:1025 (windows: cmd)
 
 ---
 
@@ -64,6 +66,17 @@ Developed for Sabancı University(mySU)
 
 ---
 
+### Docs:
+- https://docs.python.org/3/library/smtplib.html
+- https://docs.python.org/3/library/email.mime.html
+- https://github.com/Knio/dominate
+
+### REFERENCE:
+- https://realpython.com/python-send-email/#option-2-setting-up-a-local-smtp-server
+- https://developers.google.com/gmail/api/quickstart/python
+- https://stackoverflow.com/questions/47869039/python-requests-login-with-website
+
+---
 Giray Coskun
 
 [giraycoskun@sabanciuniv.edu](mailto:giraycoskun@sabanciuniv.edu)
