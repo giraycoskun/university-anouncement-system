@@ -36,6 +36,8 @@ Developed for Sabancı University(mySU)
 
 - [passwords.txt](https://github.com/giraycoskun/University-Anouncement-System/blob/master/passwords.template) Keeps passwords
 
+- [log.json](https://github.com/giraycoskun/University-Anouncement-System/blob/master/log.json) Keeps Logs
+
 ---
 ### Class: Website
 #### Properties:
