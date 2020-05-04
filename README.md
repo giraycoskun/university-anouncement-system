@@ -8,6 +8,7 @@ Developed for Sabancı University(mySU)
 
 #### Notes:
 
+- Required to install [https://github.com/Knio/dominate](https://github.com/Knio/dominate)
 - Change passwords.template to passwords.txt with valid passwords
 - Change mail_service/last_announcements.template to mail_service/last_announcements.json
 - Change mail_service/mail_list.template to mail_service/mail_list.txt with valid mail adresses
