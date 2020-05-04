@@ -6,8 +6,9 @@ References:
     https://stackoverflow.com/questions/47869039/python-requests-login-with-website
 """
 
-from webpage import mySU
-import pprint
+from webpage.mySU import MySU
+from mail_service.HTML_Template import create_template_html
+from mail_service.Announcement_Mail_Server import mail_server
 
 url = "https://mysu.sabanciuniv.edu/announcements/en/all"
 base_url = "https://mysu.sabanciuniv.edu"
@@ -25,13 +26,22 @@ with open('passwords.txt', 'r') as file:
 
 auth = (user_name, password)
 
-page = mySU.MySU(url, user_agent)
+page = MySU(url, user_agent)
 page.set_authorization(auth)
 page.login()
 page.get_page()
-#page.display()
+# page.display()
 
 announcements = page.get_announcement_list()
 announcements = page.get_announcements(announcements)
-pp = pprint.PrettyPrinter(indent=4)
-pp.pprint(announcements)
+
+# CHECK LAST ANNOUNCEMENTS
+check = True
+################
+
+if check:
+    # CREATE HTML TEMPLATE
+    html = create_template_html(announcements)
+    ################
+
+    mail_server(html)

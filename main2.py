@@ -12,9 +12,9 @@ import webbrowser
 
 def display(content):
     # to see this HTML in web browser
-    with open('temp.html', 'wb') as f:
+    with open('mail_service/temp.html', 'wb') as f:
         f.write(content)
-        webbrowser.open('temp.html')
+        webbrowser.open('mail_service/temp.html')
 
 
 def main():
