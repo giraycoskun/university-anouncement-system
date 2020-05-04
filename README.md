@@ -26,7 +26,7 @@ Developed for Sabancı University(mySU)
     - creates template html [HTML_Template.py](https://github.com/giraycoskun/University-Anouncement-System/tree/master/mail_service/HTML_Template.py)
     - sends email to receiver emails [Announcement_Mail_Server.py](https://github.com/giraycoskun/University-Anouncement-System/tree/master/mail_service/Announcement_Mail_Server.py)
     - keeps data to already sent announcements [last_announcements.json](https://github.com/giraycoskun/University-Anouncement-System/tree/master/mail_service/last_announcements.template)
-    - keeps mail list both sender and receivers [mail_list.txt](https://github.com/giraycoskun/University-Anouncement-System/tree/master/mail_service/mail_list.templated)
+    - keeps mail list both sender and receivers [mail_list.txt](https://github.com/giraycoskun/University-Anouncement-System/tree/master/mail_service/mail_list.template)
 
 - [webpage](https://github.com/giraycoskun/University-Anouncement-System/tree/master/webpage)
     - [WebPage Class](https://github.com/giraycoskun/University-Anouncement-System/tree/master/webpage/WebPage.py)
