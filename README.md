@@ -1,4 +1,4 @@
-# Anouncement Notification System for University Anouncements
+# Announcement Notification System for University Announcements
 
 A System to track announcements from a website with Central Authentication System(CAS) such as university acounts
 
