@@ -1,0 +1,31 @@
+h1{
+	text-align:center;
+}
+
+.header1{	
+	text-decoration: none !important;
+	color:crimson	
+}
+
+.header2{
+	color: DodgerBlue
+}
+
+img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+#footer{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 25px;
+	padding-top: 25px;
+	text-align:center;
+	background-color: lightblue;
+}
+
+.footer_ref{
+	color: indigo;
+}

@@ -1,6 +1,8 @@
 .idea/
 venv/
 __pycache__/
+webpage/__pycache__/
+mail_service/__pycache__/
 passwords.txt
 mail_service/mail_list.txt
 mail_service/last_announcements.json
