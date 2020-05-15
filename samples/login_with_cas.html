@@ -1,0 +1,187 @@
+<!DOCTYPE html><html>
+<head>
+    <title>Login - CAS &#8211; Central Authentication Service</title>
+    <meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="stylesheet" href="/cas/webjars/font-awesome/5.0.13/web-fonts-with-css/css/fontawesome-all.min.css"/><link type="text/css" rel="stylesheet" href="/cas/webjars/lato/0.3.0/css/lato.min.css"/><link rel="stylesheet" href="/cas/css/cas.css"/><link rel="icon" href="/cas/favicon.ico" type="image/x-icon"/><script type="text/javascript" src="/cas/webjars/jquery/3.3.1/jquery.min.js"></script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/></head>
+
+<body class="login">
+<header role="banner">
+    
+            <div class="row">
+                <div class="col-md-3 col-sm-2 col-xs-1 headerLeftBar" ></div>
+           
+            <div class=" col-md-9 col-sm-10 col-xs-11 imageBar">
+                 <h1 id="company-name">Jasig</h1>
+                <h1 id="app-name" class="fl-table-cell">Central Authentication Service (CAS)</h1>
+            </div>
+        </div>
+        </nav>
+    </header>
+
+<main role="main" class="container mt-3 mb-3">
+    <div id="content" class="row containerStyle">
+        <div class="offset-md-3 offset-sm-2 col-md-3 col-sm-4 d-none d-sm-block centerVertically mt-15 ">
+            <div id="sidebar" class="verticallyCenter">
+        <div class="sidebar-content">
+            <p class="sidebar-p casTitle">Welcome to Central Authentication Service</p>
+            <p class="sidebar-p"><font color="blue">Please, verify the URL for this page begins with <b>login.sabanciuniv.edu</b> </font><br><br>For security reasons, please <a href="logout">log out</a> and exit your web browser when you are done accessing services that require authentication!</p>
+        </div>
+    </div>
+             <form method="post" id="passwordManagementForm" class="verticallyCenter text-left w-100">
+                <input type="hidden" name="execution" value="a09bb935-19ad-44c4-920b-cf9b6aef3d6f_ZXlKaGJHY2lPaUpJVXpVeE1pSjkuRm0rcVdkNW5uK0MranFMR1c0V21KUjgzdTFpMHVuQy9hRzhkenJBOTNJZmZHQWtqNkRzSHI2QUFBNkVpVXlFZ3JWeWxvUmExZjBQWXdMdHFheUdMMWRTUHM1eWYzb0p4WUhaK0JNdjdPMGRXMU10Q29iSDdGUUt0N3RqMWFTd2ViMWl0cFBTeFZPYStiQnBpSk1tY0tIWG92SERPaERQVEFOOEU1RXRUMkFIdGlXWENpRWE4Mi9WUk44SG5Ec3cyaVRTNm5yaXgrNkRSNmxSQjhPWW5ubzQ0c2pwdytCOXpaYVlmVmNqNW5ENy9SMlFPRlZ5ZTU1OHZxRUR6YkYySnA5UnVRcU9ucmxhSFR3cnkwYzFSRVBLWjEzcnBxaXpHWkg2R01XdzlBWXJxWkQwaVZhSzNuMWJoTVgvaHNDOGE0N0FaNDBXdGlVNjZZRWppNVhhMzZXMkIzQWNRTElxdjZzTGZNcnlBTWpJNmU1YmRhYTMya20xQ0VBdUlaMTA1Z1NOeVE1WmE0cm8wZVkvTEpsSm1VVnpSTEN1VG1jUHBjWVgwMGNqVEVTRUtrQkF3aEp2bnNGdDV5Q1ROMDlubGhDbThsR0VXUHJTcXl4S3ZWWUxiYVFOVUZBMi9oQXpzaEMwVk1vTjZvd3FpV01ESXZYYzNNa3dneFZSTlBKR1MxQzl1L0pGb2RhRGFMRDNyYUtvWmVQVGZKcGVQM2NzTWUxdnh0eHp4Q3BaZjdxRVZGaURNYzNJOEIxMVhQSndEYndhKzIyZk9aM1RFYzJwLzVBTFZWczE4eTJqVUdYbXRiMDN3SC9tM0ladVBlOXFpRXgzdm84NFNRdHhKZUM2NngzRzNCUWlwV0RidXVpMEtHN1pDczhSS2xmL2JpNzhkK2ZpMTVtdkEzOStRZUtVTFlpOUV1Y1VxK0R1eVhHRDZ0R09GdWg1VllwRTFEUjJFUDFyekdjdkxYYlFaajFrVmZNTmpjR21waWNqSlpIUC9QOHRhRWMvVHozM0kvZTVxU3Q5aUhkYXFiZjYxTjV5LzI5aWVpWDcrbnNOZ3VtaUlLVTUxajJQTllwR0JFckFaQUE4aGZBVjF6aFNMUnBBczVUU1R6UWVaUVZRZXlUWldBVytLSFAwQ29GeFkvck9FQW9tV3BuLzlQVDNsVytGayt6bkFYQzZFanBOYXBoVjhKa2JkdnV5SnRlam53S3NQUGZjU1ZhYnN2QjJMMnVaMjZEUS9MeXZSbE15M09xSTJPVVAyZzh5VXhEYjdpNE82Qmx6bHFndTJOMFBPK3ZMREo3ZnB6UDZEa1M1NlVvOFRTQ2tQZEVWcWQxQ1hGWk1ySTNSeGJZeUVRTTlHOENhMjRNU2p0UlE0YzBac0VQQ0UzS2h4bjJ2NHU1bDlEV0w5NEVocXRSSGtCN21QN25HKzU1QXpiSi9mVmw3OVRzTDhzVHljc3ZMaWFLaC9PeXljbjk5RDVLYmZvODZYbzg1SGp1WlJnT20wcmZUVkV1Nnp0TysxcFVwTEJuNGg4cFdaOS8vdENVWDVZbWhHenZxVW5NWjBwczNVVDd2MkFKWEQzZ1ViOXpKbkxsN3hvN2hyRGhDL3NobGlqNWRVZzc0dFhSUWhOQnVvNytNd05McStnU2lMZTZIOXYrQ29GUVhCU0l6UXN0aHY5cHVPTzFQaXdhRTN4aE81TTc0UW5ZTzd2K1N5eXhnaVV6b2hKMk81SmJEZnNoUVRYUC9sZDZWWkVJaXBtT01HcTd3cjZ1b0dSUXZZNEd0NHQvRzEvb3VJdjVkTElQamxObE1IRmN3V1NuWXJaUnYzSll4emRvNDJxQlZLL3BTOTB6aXF3by8wQjJUdHFOcnBCNG8xRXpRSHJ0WTVNS3NaYkpYdy80cVJwT1kvNzVhSllPaFNzQnNBaVFkKzZvbHNjRlFONHZTdUtESXd0OHFnd2V4RkRmdnVDU0l5aGl3dk81S3NTQzdSN1BxdkNFRUpUOUQzZHNKK3dpVGxwQmNQdjBpRCttZlI5VDVrSUhucjVnbTQzaVpra0hzOE9TaXZ5dWFITjBadnlwRlFDdkhld0RHYlNPbVVrNGs1RTN5V2tITWNFTTdncjB4NG1IeDBoc3dwdEU2V0oxcGpZWE83RWtpeWhscVdUYUNEZ3RtZUl3Wk0xdXJ6WUU2VVZkNnFaUFVOOWJRNUdFWWU2czdlbE83SjM3NjA5Zk15NDVINDkzdXhwc1pQUmpGdWtKd25YNXViaWtWbE9ZbjdNMXZ0bFhtUzg2UUI4TktJajRyOUNtWkN2aTdxMzBnSnprencxanp1T2VzZTh6NzM2c3lqOHkvNnJkYi9EVllnbHFuNlVlRjl1QnJlRUtUTmp4WWVhWUFwUUh0Nk5BbXFIWUxVSmUwMHNyVmpHNFU0d0J1M0NweGxkMHdrc0tGK3RUaDZPSVZoY3VYNnFtV29qRm5VcEV6c2xwMkQ0R3pUMWR2TUx4eDlIaEpmMTlPVU5jQm5ocWJValhEMndwV0ZxcWRCT0lUaExGanVPNHFEOHhJa3MweVppdG5tbjd0SDhTZDVkYzduK2gzcm1ldVZ6QmJmcmRWL0tpL3UwOXlSVDkrUnVtd2NkeE1YNlZ0ekNDR05heGlYRzZ0S2xyS3kwOFNscDNvNnZvOEtla0lkV3oxODdXOVVUU1h1cHd5YzZJN3cvRG5VWlhsMksvRkdZWU5iNVdISFpsVDZvREVIamc1VG5BQ3U1Nlg0U0hWT0kwTXBub3NOcWE3dGk3elJsYnBoYWJpdU1oYktEdUxkWnVIcDdkekIrTnRpU1g0eDhlSk02SHRrS3VBKzlpa3c5RURnRjJSeng3QUx1SWtRdXNLZ0V5NHJBenNsQkNlKzFYbmkvbmxaSWlFdjBEa2NCSDZwSi9rR1R1bGRraERrNFRFZFZBbUtFdU94WFRLNjJyUk9xZ3lvTzdObDR4N0RQRUlkNy9mZ2VQeTNoejN3dnltTTcrdmVEZHRLT2FqNnJEdXNDbFZLc3F5a1Y0VHZEREpDamJvOWlqNEx2U1ZubEFMRWZWb2R4VmJBaWdkNEJOZS9qdXEwNHFSaUFRUFBKakIwVFlsUGNFNEprQ2ZHN09DbTUwNVdrT0NyWE01VU5aY2tXdDJtRGQ5cDZRL2hzNkpHd2FiNEJFUTkzK2xicnU2Ni9acmJOVkZkTUk1N0haYXpXZFp3UDlCREJDQ3d0RDVnaC8wTk4vU1dLYTNqZFFBTDEyVUdEbDVIM05wTkptMDJzU2pMVGJMWmltdmoxUXF3Qm9yaFN2ZjA4RzlQeEx6Sk0ya2w5a29JYkxmMjJyUmJWYm05OGorMDcyQi9CdzQ1K1RlUUJBN3hCRVphU3IzdHk4WkJDVnhzeUQ3OUM0UEtGczZsTDVrVzZWN2g2YVJDajg1dnE1MU5oTDBnQ1N3aFVYbytCaU5NL0pISW1EcmpTdzZsS3h0YThJZkgrT0dFNzI2Mzk2blVWU0RGMTFvSmhFU0tFanRmakNpbXRkVjhaWEd4NEFFSVk5V0dRUEV2Y3o4WDhlRks5OElldGxMMEdiVUVXQWgyR3A4RW16L2diSWtUK1VjWGh5OGg2dThBL2UwelJ5MGhVTVFNV0hJc2RaWmw1Q2VDR3pDMXpLYzFyYTVUaFJZN2VVSm52eEl5TXdZeTRIc1NWc09rbFVGMFdXZ2dLaHpyeGplUm1uQXc0bi92KzdhZ3AzeWp2a29WZzlOZjRqRm1QcmZQQ1ZjMU15Qk5iSTRtRTdJY1lSK2xkdlA3RCtqMVUzMWRaYjA5ZVF3MXZDTUFGUFVWdy9GTXMwbFM3b0NSaDY1TXBoOTFKcE9scDlQSjlHTk1HS2dMYytnclBoZ1o4WjJpN1ZlbnJWbEpvZGNVV3hUTEhqU3daZ21pWitGMkFySWdtb3NGRTJ0d2g2R1RXRXNXNmI3aEtvWlBYbUVyOUVzWGFQNUthU2xJb1FCdUxYT01RUnJRbVpoakFSY2hSQzhLcG1pUGZ6MHB6YVZZK2lORnpxbjFjMG5hVEZUOHdwZ3FzeFhOSHBMeWFlSWM2c3I1eGJRa2pUSjBEVzVNRFdLNWlxU1hkcGZVOVZJakhoWjJuZz09Li1scFZrSEN4YU50RGVhNDdjc0VYM1hacDNXbVpYdThOMjYzSVAxSWo4d2ZXWXBBdUdFRG00ZU51T2VONHNyYk1QYUhoUDg4bmE2N1FlU0tWMnhmOEl3"/><input type="hidden" name="_eventId" value="resetPassword"/><!--<span class="fa fa-unlock"></span>--><a class="sidebar-p" href="https://mysu.sabanciuniv.edu/it/en/su-net-password" >Change password</a>
+                <p/></form>
+            <div class="verticallyCenter text-left w-100">
+                <!--<span class="fa fa-question-circle"></span>--><div class="sidebar-p">If you forget your password, you can <span><a href="https://suaccount.sabanciuniv.edu/reset" target="_blank">reset</a></span> or get help from (0216) 483 9988 </div>
+                <p/></div>
+
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12 ">
+            <div class="card">
+
+
+            <div class="card-body">
+                    <form method="post" id="fm1" action="login">
+                        <section class="form-group">
+                            <label for="username"><span class="accesskey">U</span>sername:</label>
+
+                            <div>
+                                <input class="form-control required"
+                                       id="username"
+                                       size="25"
+                                       tabindex="1"
+                                       type="text"
+                                       accesskey="u"
+                                       autocomplete="off" name="username" value=""/></div>
+                        </section>
+
+                        <section class="form-group">
+                            <label for="password"><span class="accesskey">P</span>assword:</label>
+
+                            <div class="passwordContainer">
+                                <input class="form-control required"
+                                       type="password"
+                                       id="password"
+                                       size="25"
+                                       tabindex="2"
+                                       accesskey="p"
+                                       autocomplete="off" name="password" value=""/><a id="capslock-on" onmousedown="$('#password').val('');$('#password-clear').css('display','none')" style="display:none;"></a>
+                                <a id="password-clear" onmousedown="$('#password').val('').focus();$('#password-clear').css('display','none')" style="display: none"></a>
+                            </div>
+                        </section>
+
+                        <section class="form-check">
+                            <p style="text-align: left;">
+                                <input type="checkbox" name="rememberMe" id="rememberMe" value="true" tabindex="5"/><label for="rememberMe" style="font-size: 14px;">Remember Me</label>
+                            </p>
+                        </section>
+
+                        <input type="hidden" name="execution" value="a09bb935-19ad-44c4-920b-cf9b6aef3d6f_ZXlKaGJHY2lPaUpJVXpVeE1pSjkuRm0rcVdkNW5uK0MranFMR1c0V21KUjgzdTFpMHVuQy9hRzhkenJBOTNJZmZHQWtqNkRzSHI2QUFBNkVpVXlFZ3JWeWxvUmExZjBQWXdMdHFheUdMMWRTUHM1eWYzb0p4WUhaK0JNdjdPMGRXMU10Q29iSDdGUUt0N3RqMWFTd2ViMWl0cFBTeFZPYStiQnBpSk1tY0tIWG92SERPaERQVEFOOEU1RXRUMkFIdGlXWENpRWE4Mi9WUk44SG5Ec3cyaVRTNm5yaXgrNkRSNmxSQjhPWW5ubzQ0c2pwdytCOXpaYVlmVmNqNW5ENy9SMlFPRlZ5ZTU1OHZxRUR6YkYySnA5UnVRcU9ucmxhSFR3cnkwYzFSRVBLWjEzcnBxaXpHWkg2R01XdzlBWXJxWkQwaVZhSzNuMWJoTVgvaHNDOGE0N0FaNDBXdGlVNjZZRWppNVhhMzZXMkIzQWNRTElxdjZzTGZNcnlBTWpJNmU1YmRhYTMya20xQ0VBdUlaMTA1Z1NOeVE1WmE0cm8wZVkvTEpsSm1VVnpSTEN1VG1jUHBjWVgwMGNqVEVTRUtrQkF3aEp2bnNGdDV5Q1ROMDlubGhDbThsR0VXUHJTcXl4S3ZWWUxiYVFOVUZBMi9oQXpzaEMwVk1vTjZvd3FpV01ESXZYYzNNa3dneFZSTlBKR1MxQzl1L0pGb2RhRGFMRDNyYUtvWmVQVGZKcGVQM2NzTWUxdnh0eHp4Q3BaZjdxRVZGaURNYzNJOEIxMVhQSndEYndhKzIyZk9aM1RFYzJwLzVBTFZWczE4eTJqVUdYbXRiMDN3SC9tM0ladVBlOXFpRXgzdm84NFNRdHhKZUM2NngzRzNCUWlwV0RidXVpMEtHN1pDczhSS2xmL2JpNzhkK2ZpMTVtdkEzOStRZUtVTFlpOUV1Y1VxK0R1eVhHRDZ0R09GdWg1VllwRTFEUjJFUDFyekdjdkxYYlFaajFrVmZNTmpjR21waWNqSlpIUC9QOHRhRWMvVHozM0kvZTVxU3Q5aUhkYXFiZjYxTjV5LzI5aWVpWDcrbnNOZ3VtaUlLVTUxajJQTllwR0JFckFaQUE4aGZBVjF6aFNMUnBBczVUU1R6UWVaUVZRZXlUWldBVytLSFAwQ29GeFkvck9FQW9tV3BuLzlQVDNsVytGayt6bkFYQzZFanBOYXBoVjhKa2JkdnV5SnRlam53S3NQUGZjU1ZhYnN2QjJMMnVaMjZEUS9MeXZSbE15M09xSTJPVVAyZzh5VXhEYjdpNE82Qmx6bHFndTJOMFBPK3ZMREo3ZnB6UDZEa1M1NlVvOFRTQ2tQZEVWcWQxQ1hGWk1ySTNSeGJZeUVRTTlHOENhMjRNU2p0UlE0YzBac0VQQ0UzS2h4bjJ2NHU1bDlEV0w5NEVocXRSSGtCN21QN25HKzU1QXpiSi9mVmw3OVRzTDhzVHljc3ZMaWFLaC9PeXljbjk5RDVLYmZvODZYbzg1SGp1WlJnT20wcmZUVkV1Nnp0TysxcFVwTEJuNGg4cFdaOS8vdENVWDVZbWhHenZxVW5NWjBwczNVVDd2MkFKWEQzZ1ViOXpKbkxsN3hvN2hyRGhDL3NobGlqNWRVZzc0dFhSUWhOQnVvNytNd05McStnU2lMZTZIOXYrQ29GUVhCU0l6UXN0aHY5cHVPTzFQaXdhRTN4aE81TTc0UW5ZTzd2K1N5eXhnaVV6b2hKMk81SmJEZnNoUVRYUC9sZDZWWkVJaXBtT01HcTd3cjZ1b0dSUXZZNEd0NHQvRzEvb3VJdjVkTElQamxObE1IRmN3V1NuWXJaUnYzSll4emRvNDJxQlZLL3BTOTB6aXF3by8wQjJUdHFOcnBCNG8xRXpRSHJ0WTVNS3NaYkpYdy80cVJwT1kvNzVhSllPaFNzQnNBaVFkKzZvbHNjRlFONHZTdUtESXd0OHFnd2V4RkRmdnVDU0l5aGl3dk81S3NTQzdSN1BxdkNFRUpUOUQzZHNKK3dpVGxwQmNQdjBpRCttZlI5VDVrSUhucjVnbTQzaVpra0hzOE9TaXZ5dWFITjBadnlwRlFDdkhld0RHYlNPbVVrNGs1RTN5V2tITWNFTTdncjB4NG1IeDBoc3dwdEU2V0oxcGpZWE83RWtpeWhscVdUYUNEZ3RtZUl3Wk0xdXJ6WUU2VVZkNnFaUFVOOWJRNUdFWWU2czdlbE83SjM3NjA5Zk15NDVINDkzdXhwc1pQUmpGdWtKd25YNXViaWtWbE9ZbjdNMXZ0bFhtUzg2UUI4TktJajRyOUNtWkN2aTdxMzBnSnprencxanp1T2VzZTh6NzM2c3lqOHkvNnJkYi9EVllnbHFuNlVlRjl1QnJlRUtUTmp4WWVhWUFwUUh0Nk5BbXFIWUxVSmUwMHNyVmpHNFU0d0J1M0NweGxkMHdrc0tGK3RUaDZPSVZoY3VYNnFtV29qRm5VcEV6c2xwMkQ0R3pUMWR2TUx4eDlIaEpmMTlPVU5jQm5ocWJValhEMndwV0ZxcWRCT0lUaExGanVPNHFEOHhJa3MweVppdG5tbjd0SDhTZDVkYzduK2gzcm1ldVZ6QmJmcmRWL0tpL3UwOXlSVDkrUnVtd2NkeE1YNlZ0ekNDR05heGlYRzZ0S2xyS3kwOFNscDNvNnZvOEtla0lkV3oxODdXOVVUU1h1cHd5YzZJN3cvRG5VWlhsMksvRkdZWU5iNVdISFpsVDZvREVIamc1VG5BQ3U1Nlg0U0hWT0kwTXBub3NOcWE3dGk3elJsYnBoYWJpdU1oYktEdUxkWnVIcDdkekIrTnRpU1g0eDhlSk02SHRrS3VBKzlpa3c5RURnRjJSeng3QUx1SWtRdXNLZ0V5NHJBenNsQkNlKzFYbmkvbmxaSWlFdjBEa2NCSDZwSi9rR1R1bGRraERrNFRFZFZBbUtFdU94WFRLNjJyUk9xZ3lvTzdObDR4N0RQRUlkNy9mZ2VQeTNoejN3dnltTTcrdmVEZHRLT2FqNnJEdXNDbFZLc3F5a1Y0VHZEREpDamJvOWlqNEx2U1ZubEFMRWZWb2R4VmJBaWdkNEJOZS9qdXEwNHFSaUFRUFBKakIwVFlsUGNFNEprQ2ZHN09DbTUwNVdrT0NyWE01VU5aY2tXdDJtRGQ5cDZRL2hzNkpHd2FiNEJFUTkzK2xicnU2Ni9acmJOVkZkTUk1N0haYXpXZFp3UDlCREJDQ3d0RDVnaC8wTk4vU1dLYTNqZFFBTDEyVUdEbDVIM05wTkptMDJzU2pMVGJMWmltdmoxUXF3Qm9yaFN2ZjA4RzlQeEx6Sk0ya2w5a29JYkxmMjJyUmJWYm05OGorMDcyQi9CdzQ1K1RlUUJBN3hCRVphU3IzdHk4WkJDVnhzeUQ3OUM0UEtGczZsTDVrVzZWN2g2YVJDajg1dnE1MU5oTDBnQ1N3aFVYbytCaU5NL0pISW1EcmpTdzZsS3h0YThJZkgrT0dFNzI2Mzk2blVWU0RGMTFvSmhFU0tFanRmakNpbXRkVjhaWEd4NEFFSVk5V0dRUEV2Y3o4WDhlRks5OElldGxMMEdiVUVXQWgyR3A4RW16L2diSWtUK1VjWGh5OGg2dThBL2UwelJ5MGhVTVFNV0hJc2RaWmw1Q2VDR3pDMXpLYzFyYTVUaFJZN2VVSm52eEl5TXdZeTRIc1NWc09rbFVGMFdXZ2dLaHpyeGplUm1uQXc0bi92KzdhZ3AzeWp2a29WZzlOZjRqRm1QcmZQQ1ZjMU15Qk5iSTRtRTdJY1lSK2xkdlA3RCtqMVUzMWRaYjA5ZVF3MXZDTUFGUFVWdy9GTXMwbFM3b0NSaDY1TXBoOTFKcE9scDlQSjlHTk1HS2dMYytnclBoZ1o4WjJpN1ZlbnJWbEpvZGNVV3hUTEhqU3daZ21pWitGMkFySWdtb3NGRTJ0d2g2R1RXRXNXNmI3aEtvWlBYbUVyOUVzWGFQNUthU2xJb1FCdUxYT01RUnJRbVpoakFSY2hSQzhLcG1pUGZ6MHB6YVZZK2lORnpxbjFjMG5hVEZUOHdwZ3FzeFhOSHBMeWFlSWM2c3I1eGJRa2pUSjBEVzVNRFdLNWlxU1hkcGZVOVZJakhoWjJuZz09Li1scFZrSEN4YU50RGVhNDdjc0VYM1hacDNXbVpYdThOMjYzSVAxSWo4d2ZXWXBBdUdFRG00ZU51T2VONHNyYk1QYUhoUDg4bmE2N1FlU0tWMnhmOEl3"/><input type="hidden" name="_eventId" value="submit"/><input type="hidden" name="geolocation"/><input class="btn btn-block btn-submit"
+                               name="submit"
+                               accesskey="l"
+                               tabindex="6"
+                               type="submit"
+                               value="LOGIN"
+                        /><input class="btn-reset" name="reset" accesskey="c" value="TEMİZLE" tabindex="5" type="reset" onclick="$('#username').focus(); $('#username-clear').css('display','none'); $('#password-clear').css('display','none'); if(document.getElementById('username-required')) $('#username-required').hide(); if(document.getElementById('password-required')) $('#password-required').hide();"></form>
+
+
+
+                    <script type="text/javascript">
+                        var i = "One moment please..."
+                        $( document ).ready(function() {
+                            $("#fm1").submit(function () {
+                                $(":submit").attr("disabled", true);
+                                $(":submit").attr("value", i);
+                                console.log(i);
+                                return true;
+                            });
+                        });
+                    </script>
+                    <!--<div th:replace="fragments/loginsidebar :: loginsidebar" />--></div>
+            </div>
+        </div>
+        <!--<div id="notices" class="col-md mt-3 mt-md-0">
+            <div th:replace="fragments/insecure :: insecure"><a href="fragments/insecure.html">insecure alert goes
+                here</a></div>
+            <div th:replace="fragments/defaultauthn :: staticAuthentication">
+                <a href="fragments/defaultauthn.html">defaultAuthn</a>
+                fragment
+            </div>
+            <div th:replace="fragments/cookies :: cookiesDisabled"><a href="fragments/cookies.html">cookies</a> fragment
+            </div>
+            <div th:replace="fragments/serviceui :: serviceUI"><a href="fragments/serviceui.html">service ui</a> fragment</div>
+            <div th:replace="fragments/loginProviders :: loginProviders"><a href="fragments/loginProviders.html">loginProviders</a>
+                fragment
+            </div>
+            <div th:replace="fragments/cas-resources-list :: cas-resource-list">
+                <a href="fragments/cas-resources-list.html">cas-resource</a> list fragment
+            </div>
+        </div>--></div>
+     <div class="col-md-12 col-sm-12 col-xs-12 ">
+        <div class="offset-md-6 offset-sm-4 guestContainer">
+            <a class="anchorGuest" href="http://www.sabanciuniv.edu/en/guests">For Guest Users »</a>
+        </div>
+    </div>
+</main>
+
+<footer class="footer footer-d-n" role="contentinfo">
+         </footer>
+
+<script type="text/javascript" src="/cas/webjars/zxcvbn/4.3.0/zxcvbn.js"></script>
+<script type="text/javascript" src="/cas/webjars/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/cas/webjars/jquery-cookie/1.4.1-1/jquery.cookie.js"></script>
+<script src="/cas/webjars/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+
+<script src="/cas/webjars/headjs/1.0.3/head.min.js"></script>
+<script src="/cas/webjars/store.js/1.3.17/store.min.js"></script>
+<script type="text/javascript" src="/cas/js/cas.js"></script>
+
+<script>
+head.ready(document, function () {
+    if (!window.jQuery) {
+    	var jqueryUrl = "\/cas\/webjars\/jquery\/3.3.1\/jquery.min.js"; 
+        head.load(jqueryUrl, loadjQueryUI);
+    } else {
+        notifyResourcesAreLoaded(resourceLoadedSuccessfully);
+    }
+});
+
+function loadjQueryUI() {
+	var jqueryUrl = "\/cas\/webjars\/jquery-ui\/1.12.1\/jquery-ui.min.js"; 
+	head.load(jqueryUrl, loadjQueryCookies);
+}
+
+function loadjQueryCookies() {
+	var jqueryUrl = "\/cas\/webjars\/jquery-cookie\/1.4.1-1\/jquery.cookie.js"; 
+	head.load(jqueryUrl, notifyResourcesAreLoaded(resourceLoadedSuccessfully));
+}
+
+function notifyResourcesAreLoaded(callback) {
+    if (typeof callback === "function") {
+        callback();
+    }
+}
+</script>
+
+<script>
+    /*<![CDATA[*/
+
+    var trackGeoLocation = false;
+
+    var googleAnalyticsTrackingId = null;
+
+    if (googleAnalyticsTrackingId != null && googleAnalyticsTrackingId != '') {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', googleAnalyticsTrackingId, 'auto');
+        ga('send', 'pageview');
+    }
+
+    /*]]>*/
+</script>
+
+</body>
+</html>
