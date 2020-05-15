@@ -81,6 +81,12 @@ Developed for Sabancı University(mySU)
 - https://developers.google.com/gmail/api/quickstart/python
 - https://stackoverflow.com/questions/47869039/python-requests-login-with-website
 
+### SAMPLES
+
+![Login with CAS](https://github.com/giraycoskun/University-Anouncement-System/blob/master/pictures/login_with_cas.JPG)
+
+
+
 ---
 Giray Coskun
 
