@@ -82,8 +82,14 @@ Developed for Sabancı University(mySU)
 - https://stackoverflow.com/questions/47869039/python-requests-login-with-website
 
 ### SAMPLES
-
+- Login Screen with CAS
 ![Login with CAS](https://github.com/giraycoskun/University-Anouncement-System/blob/master/pictures/login_with_cas.JPG)
+
+- Announcements Page
+![Announcements Page](https://github.com/giraycoskun/University-Anouncement-System/blob/master/pictures/announcements_page.JPG)
+
+- Sent Mail
+![Sent MAil](https://github.com/giraycoskun/University-Anouncement-System/blob/master/pictures/sample_mail.JPG)
 
 
 
