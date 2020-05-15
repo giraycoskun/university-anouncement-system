@@ -75,6 +75,11 @@ try:
             for element in new_data:
                 temp.append(element)
 
+            if len(temp) > 30:
+            	count = len(temp) - 30
+            	for i in range(count):
+            		temp.pop(i)
+
         with open(filename, 'w') as json_file:
             json.dump(data, json_file, indent=4)
 
